@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    android:elevation="5dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="10dp"
+            android:background="@color/colorPrimaryLight"/>
+
+        <ImageView
+            android:id="@+id/subject_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_lightbulb_outline_blue_24dp"/>
+
+        <LinearLayout
+            android:layout_toEndOf="@+id/subject_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            android:elevation="2dp">
+
+            <TextView
+                android:id="@+id/subject_name_text"
+                android:layout_width="wrap_content"
+                android:text="@string/subjects_text"
+                android:textSize="17sp"
+                android:textColor="#808080"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/progress_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#808080"
+                    android:textStyle="bold"
+                    android:text="Progress"/>
+
+                <View
+                    android:layout_toEndOf="@+id/progress_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/progress_percent"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/progress_background"/>
+
+                <TextView
+                    android:id="@+id/progress_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="0%"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
